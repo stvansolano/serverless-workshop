@@ -1,0 +1,6 @@
+db.MyToDos.drop()
+
+
+db.MyToDos.insert({"name":"Batman"})
+
+db.MyToDos.find().pretty()
