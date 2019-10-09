@@ -1,6 +1,8 @@
-db.MyToDos.drop()
+//db.MyToDos.drop()
 
 
-db.MyToDos.insert({"name":"Batman"})
+//db.MyToDos.insert({"name":"Batman"})
 
 db.MyToDos.find().pretty()
+
+db.MyToDos.find({}, { name: 1, _id: 1 })
