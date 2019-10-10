@@ -4,13 +4,13 @@
 
 ### Requisites
 
-a) Install Node
-b) Install Docker Desktop
-c) Install VS Code
-d) Install VS Code extensions
+- a) Install Node
+- b) Install Docker Desktop
+- c) Install VS Code
+- d) Install VS Code extensions
     - Docker or Docker explorer
     - Azure Functions Extension
-e) Install Azure Functions Core Tools: 
+- e) Install Azure Functions Core Tools: 
     https://github.com/Azure/azure-functions-core-tools
 
 ### NodeJS functions development
