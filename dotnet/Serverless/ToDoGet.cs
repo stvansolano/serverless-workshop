@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,8 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using Newtonsoft.Json;
 
-namespace Serverless {
+namespace Serverless 
+{
     public static class ToDoGet {
         [FunctionName ("ToDoGet")]
         public static async Task<IActionResult> Run (
@@ -23,6 +25,13 @@ namespace Serverless {
             var databaseName = Environment.GetEnvironmentVariable ("MongoDbDatabase");
             var collectionName = Environment.GetEnvironmentVariable ("MongoDbCollection");
 
+            MongoClientSettings settings = MongoClientSettings.FromUrl(
+                new MongoUrl(connection)
+            );
+            
+            settings.SslSettings = new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
+            
+            var mongoClient = new MongoClient(settings);
             var client = new MongoClient (connection);
             var database = client.GetDatabase (databaseName);
 
