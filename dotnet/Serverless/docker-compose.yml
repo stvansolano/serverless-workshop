@@ -1,0 +1,18 @@
+version: "3"
+services:
+  functions:
+    build: .
+    ports:
+    - "8080:80"
+    depends_on:
+    - mongo
+    environment:
+    - MongoDbConnection=mongodb://mongo:27017
+    - MongoDbDatabase=ToDos
+    - MongoDbCollection=MyToDos
+    #env_file:
+    #- web-variables.env
+  mongo:
+    image: mongo:4.0.4
+    ports:
+    - "27017:27017"
