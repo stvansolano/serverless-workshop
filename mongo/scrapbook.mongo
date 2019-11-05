@@ -1,7 +1,16 @@
 //db.MyToDos.drop()
 
 
-//db.MyToDos.insert({"name":"Batman"})
+db.MyToDos.insert({"name":"Batman"})
+
+
+db.MyToDos.insert(
+    [{
+		"id": "12345",
+		"name": "William",
+		"surname": "McClane"
+	}]
+)
 
 db.MyToDos.find().pretty()
 
