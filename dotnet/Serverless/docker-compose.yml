@@ -10,6 +10,8 @@ services:
     - MongoDbConnection=mongodb://mongo:27017
     - MongoDbDatabase=ToDos
     - MongoDbCollection=MyToDos
+
+    - AzureSignalRConnectionString=Endpoint=https://mytodos.service.signalr.net;AccessKey=a5gTwSTLiRKQcPXkG/iGnE+JLo7Huvyi8GFiEE7a0x8=;Version=1.0;
     #env_file:
     #- web-variables.env
   mongo:
