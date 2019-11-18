@@ -38,6 +38,23 @@ func init MyToDoList --docker
 
 `func start --build`
 
+
+5) Optionally, with Docker compose (required for MongoDBs)
+
+    ```
+    Building functions
+    Step 1/6 : FROM microsoft/dotnet:2.2-sdk AS installer-env
+    2.2-sdk: Pulling from microsoft/dotnet
+    9a0b0ce99936: Pull complete
+    db3b6004c61a: Pull complete
+    f8f075920295: Pull complete
+    6ef14aff1139: Pull complete
+    c05081985e91: Pull complete
+    6c5e96b85e8c: Pull complete
+    d39c626fbbd1: Extracting [===========>                                       ]   67.4MB/300.7MB
+    ```
+
+
 ## Getting Started - Hello Mobile
 
 ### Requisites
@@ -115,3 +132,20 @@ FunctionApp
 ### Publish functions
 
 `func azure functionapp publish <YourFunctionAppName> --publish-local-settings -i --overwrite-settings -y`
+
+### Azure Functions Hosting Plans
+
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale
+
+## SignalR
+
+https://github.com/aspnet/AzureSignalR-samples/tree/master/samples/SimpleEcho
+
+## Linux commands
+
+ps aux
+kill -9 ID
+
+### Install Azure CLI Tools
+sudo apt-get update
+sudo apt-get install azure-functions-core-tools
