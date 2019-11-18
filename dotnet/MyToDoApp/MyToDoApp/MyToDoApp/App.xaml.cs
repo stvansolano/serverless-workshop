@@ -13,7 +13,7 @@ namespace MyToDoApp
 		{
 			InitializeComponent();
 
-			DependencyService.Register<MockDataStore>();
+			DependencyService.Register<BackendDataStore>();
 			MainPage = new AppShell();
 		}
 
